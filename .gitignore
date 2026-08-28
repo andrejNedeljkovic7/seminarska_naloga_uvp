@@ -1,0 +1,28 @@
+# Prevedene Python datoteke
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribucija in paketi
+build/
+dist/
+*.egg-info/
+
+# Virtualna okolja
+venv/
+env/
+.env
+.venv/
+
+# Jupyter Notebook kontrolne točke
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Nastavitve urejevalnikov
+.vscode/
+.idea/
+*.swp
+
+# Sistemske datoteke
+.DS_Store
+Thumbs.db
