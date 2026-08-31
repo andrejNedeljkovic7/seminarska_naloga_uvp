@@ -44,12 +44,26 @@ def prenesi_lestvice(sezone):
     return lestvice
 
 
-def prenesi_rezultate(sezone):
-    rezultati = {}
-    for sezona in sezone:
-        rezultati[sezona] = prenesi(
-            f"{sezona}/results.json",
-            parametri={"limit": 100},
-            ime_datoteke=f"results_{sezona}.json",
+def prenesi_stran_po_stran(koncna_tocka, predpona):
+    """API vrne največ 100 zapisov na zahtevek, zato berem, dokler ne pridem do konca."""
+    strani = []
+    odmik = 0
+    while True:
+        podatki = prenesi(
+            koncna_tocka,
+            parametri={"limit": 100, "offset": odmik},
+            ime_datoteke=f"{predpona}_offset_{odmik}.json",
         )
-    return rezultati
+        strani.append(podatki)
+        skupaj = int(podatki["MRData"].get("total", 0))
+        odmik += 100
+        if odmik >= skupaj:
+            break
+    return strani
+
+
+def prenesi_rezultate(sezone):
+    return {
+        sezona: prenesi_stran_po_stran(f"{sezona}/results.json", f"results_{sezona}")
+        for sezona in sezone
+    }
