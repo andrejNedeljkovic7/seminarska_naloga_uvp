@@ -1,0 +1,174 @@
+sezona,uvrstitev,tocke,zmage,id_dirkaca,ime_dirkaca,drzavljanstvo,ekipa
+2018,1,408.0,11,hamilton,Lewis Hamilton,British,Mercedes
+2018,2,320.0,5,vettel,Sebastian Vettel,German,Ferrari
+2018,3,251.0,1,raikkonen,Kimi Räikkönen,Finnish,Ferrari
+2018,4,249.0,2,max_verstappen,Max Verstappen,Dutch,Red Bull
+2018,5,247.0,0,bottas,Valtteri Bottas,Finnish,Mercedes
+2018,6,170.0,2,ricciardo,Daniel Ricciardo,Australian,Red Bull
+2018,7,69.0,0,hulkenberg,Nico Hülkenberg,German,Renault
+2018,8,62.0,0,perez,Sergio Pérez,Mexican,Force India
+2018,9,56.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2018,10,53.0,0,sainz,Carlos Sainz,Spanish,Renault
+2018,11,50.0,0,alonso,Fernando Alonso,Spanish,McLaren
+2018,12,49.0,0,ocon,Esteban Ocon,French,Force India
+2018,13,39.0,0,leclerc,Charles Leclerc,Monegasque,Sauber
+2018,14,37.0,0,grosjean,Romain Grosjean,French,Haas F1 Team
+2018,15,29.0,0,gasly,Pierre Gasly,French,Toro Rosso
+2018,16,12.0,0,vandoorne,Stoffel Vandoorne,Belgian,McLaren
+2018,17,9.0,0,ericsson,Marcus Ericsson,Swedish,Sauber
+2018,18,6.0,0,stroll,Lance Stroll,Canadian,Williams
+2018,19,4.0,0,brendon_hartley,Brendon Hartley,New Zealander,Toro Rosso
+2018,20,1.0,0,sirotkin,Sergey Sirotkin,Russian,Williams
+2019,1,413.0,11,hamilton,Lewis Hamilton,British,Mercedes
+2019,2,326.0,4,bottas,Valtteri Bottas,Finnish,Mercedes
+2019,3,278.0,3,max_verstappen,Max Verstappen,Dutch,Red Bull
+2019,4,264.0,2,leclerc,Charles Leclerc,Monegasque,Ferrari
+2019,5,240.0,1,vettel,Sebastian Vettel,German,Ferrari
+2019,6,96.0,0,sainz,Carlos Sainz,Spanish,McLaren
+2019,7,95.0,0,gasly,Pierre Gasly,French,Red Bull
+2019,8,92.0,0,albon,Alexander Albon,Thai,Toro Rosso
+2019,9,54.0,0,ricciardo,Daniel Ricciardo,Australian,Renault
+2019,10,52.0,0,perez,Sergio Pérez,Mexican,Racing Point
+2019,11,49.0,0,norris,Lando Norris,British,McLaren
+2019,12,43.0,0,raikkonen,Kimi Räikkönen,Finnish,Alfa Romeo
+2019,13,37.0,0,kvyat,Daniil Kvyat,Russian,Toro Rosso
+2019,14,37.0,0,hulkenberg,Nico Hülkenberg,German,Renault
+2019,15,21.0,0,stroll,Lance Stroll,Canadian,Racing Point
+2019,16,20.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2019,17,14.0,0,giovinazzi,Antonio Giovinazzi,Italian,Alfa Romeo
+2019,18,8.0,0,grosjean,Romain Grosjean,French,Haas F1 Team
+2019,19,1.0,0,kubica,Robert Kubica,Polish,Williams
+2019,20,0.0,0,russell,George Russell,British,Williams
+2020,1,347.0,11,hamilton,Lewis Hamilton,British,Mercedes
+2020,2,223.0,2,bottas,Valtteri Bottas,Finnish,Mercedes
+2020,3,214.0,2,max_verstappen,Max Verstappen,Dutch,Red Bull
+2020,4,125.0,1,perez,Sergio Pérez,Mexican,Racing Point
+2020,5,119.0,0,ricciardo,Daniel Ricciardo,Australian,Renault
+2020,6,105.0,0,sainz,Carlos Sainz,Spanish,McLaren
+2020,7,105.0,0,albon,Alexander Albon,Thai,Red Bull
+2020,8,98.0,0,leclerc,Charles Leclerc,Monegasque,Ferrari
+2020,9,97.0,0,norris,Lando Norris,British,McLaren
+2020,10,75.0,1,gasly,Pierre Gasly,French,AlphaTauri
+2020,11,75.0,0,stroll,Lance Stroll,Canadian,Racing Point
+2020,12,62.0,0,ocon,Esteban Ocon,French,Renault
+2020,13,33.0,0,vettel,Sebastian Vettel,German,Ferrari
+2020,14,32.0,0,kvyat,Daniil Kvyat,Russian,AlphaTauri
+2020,15,10.0,0,hulkenberg,Nico Hülkenberg,German,Racing Point
+2020,16,4.0,0,raikkonen,Kimi Räikkönen,Finnish,Alfa Romeo
+2020,17,4.0,0,giovinazzi,Antonio Giovinazzi,Italian,Alfa Romeo
+2020,18,3.0,0,russell,George Russell,British,Williams
+2020,19,2.0,0,grosjean,Romain Grosjean,French,Haas F1 Team
+2020,20,1.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2020,21,0.0,0,latifi,Nicholas Latifi,Canadian,Williams
+2020,22,0.0,0,aitken,Jack Aitken,British,Williams
+2020,23,0.0,0,pietro_fittipaldi,Pietro Fittipaldi,Brazilian,Haas F1 Team
+2021,1,395.5,10,max_verstappen,Max Verstappen,Dutch,Red Bull
+2021,2,387.5,8,hamilton,Lewis Hamilton,British,Mercedes
+2021,3,226.0,1,bottas,Valtteri Bottas,Finnish,Mercedes
+2021,4,190.0,1,perez,Sergio Pérez,Mexican,Red Bull
+2021,5,164.5,0,sainz,Carlos Sainz,Spanish,Ferrari
+2021,6,160.0,0,norris,Lando Norris,British,McLaren
+2021,7,159.0,0,leclerc,Charles Leclerc,Monegasque,Ferrari
+2021,8,115.0,1,ricciardo,Daniel Ricciardo,Australian,McLaren
+2021,9,110.0,0,gasly,Pierre Gasly,French,AlphaTauri
+2021,10,81.0,0,alonso,Fernando Alonso,Spanish,Alpine F1 Team
+2021,11,74.0,1,ocon,Esteban Ocon,French,Alpine F1 Team
+2021,12,43.0,0,vettel,Sebastian Vettel,German,Aston Martin
+2021,13,34.0,0,stroll,Lance Stroll,Canadian,Aston Martin
+2021,14,32.0,0,tsunoda,Yuki Tsunoda,Japanese,AlphaTauri
+2021,15,16.0,0,russell,George Russell,British,Williams
+2021,16,10.0,0,raikkonen,Kimi Räikkönen,Finnish,Alfa Romeo
+2021,17,7.0,0,latifi,Nicholas Latifi,Canadian,Williams
+2021,18,3.0,0,giovinazzi,Antonio Giovinazzi,Italian,Alfa Romeo
+2021,19,0.0,0,mick_schumacher,Mick Schumacher,German,Haas F1 Team
+2021,20,0.0,0,kubica,Robert Kubica,Polish,Alfa Romeo
+2021,21,0.0,0,mazepin,Nikita Mazepin,Russian,Haas F1 Team
+2022,1,454.0,15,max_verstappen,Max Verstappen,Dutch,Red Bull
+2022,2,308.0,3,leclerc,Charles Leclerc,Monegasque,Ferrari
+2022,3,305.0,2,perez,Sergio Pérez,Mexican,Red Bull
+2022,4,275.0,1,russell,George Russell,British,Mercedes
+2022,5,246.0,1,sainz,Carlos Sainz,Spanish,Ferrari
+2022,6,240.0,0,hamilton,Lewis Hamilton,British,Mercedes
+2022,7,122.0,0,norris,Lando Norris,British,McLaren
+2022,8,92.0,0,ocon,Esteban Ocon,French,Alpine F1 Team
+2022,9,81.0,0,alonso,Fernando Alonso,Spanish,Alpine F1 Team
+2022,10,49.0,0,bottas,Valtteri Bottas,Finnish,Alfa Romeo
+2022,11,37.0,0,ricciardo,Daniel Ricciardo,Australian,McLaren
+2022,12,37.0,0,vettel,Sebastian Vettel,German,Aston Martin
+2022,13,25.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2022,14,23.0,0,gasly,Pierre Gasly,French,AlphaTauri
+2022,15,18.0,0,stroll,Lance Stroll,Canadian,Aston Martin
+2022,16,12.0,0,mick_schumacher,Mick Schumacher,German,Haas F1 Team
+2022,17,12.0,0,tsunoda,Yuki Tsunoda,Japanese,AlphaTauri
+2022,18,6.0,0,zhou,Guanyu Zhou,Chinese,Alfa Romeo
+2022,19,4.0,0,albon,Alexander Albon,Thai,Williams
+2022,20,2.0,0,latifi,Nicholas Latifi,Canadian,Williams
+2022,21,2.0,0,de_vries,Nyck de Vries,Dutch,Williams
+2022,22,0.0,0,hulkenberg,Nico Hülkenberg,German,Aston Martin
+2023,1,575.0,19,max_verstappen,Max Verstappen,Dutch,Red Bull
+2023,2,285.0,2,perez,Sergio Pérez,Mexican,Red Bull
+2023,3,234.0,0,hamilton,Lewis Hamilton,British,Mercedes
+2023,4,206.0,0,alonso,Fernando Alonso,Spanish,Aston Martin
+2023,5,206.0,0,leclerc,Charles Leclerc,Monegasque,Ferrari
+2023,6,205.0,0,norris,Lando Norris,British,McLaren
+2023,7,200.0,1,sainz,Carlos Sainz,Spanish,Ferrari
+2023,8,175.0,0,russell,George Russell,British,Mercedes
+2023,9,97.0,0,piastri,Oscar Piastri,Australian,McLaren
+2023,10,74.0,0,stroll,Lance Stroll,Canadian,Aston Martin
+2023,11,62.0,0,gasly,Pierre Gasly,French,Alpine F1 Team
+2023,12,58.0,0,ocon,Esteban Ocon,French,Alpine F1 Team
+2023,13,27.0,0,albon,Alexander Albon,Thai,Williams
+2023,14,17.0,0,tsunoda,Yuki Tsunoda,Japanese,AlphaTauri
+2023,15,10.0,0,bottas,Valtteri Bottas,Finnish,Alfa Romeo
+2023,16,9.0,0,hulkenberg,Nico Hülkenberg,German,Haas F1 Team
+2023,17,6.0,0,ricciardo,Daniel Ricciardo,Australian,AlphaTauri
+2023,18,6.0,0,zhou,Guanyu Zhou,Chinese,Alfa Romeo
+2023,19,3.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2023,20,2.0,0,lawson,Liam Lawson,New Zealander,AlphaTauri
+2023,21,1.0,0,sargeant,Logan Sargeant,American,Williams
+2023,22,0.0,0,de_vries,Nyck de Vries,Dutch,AlphaTauri
+2024,1,437.0,9,max_verstappen,Max Verstappen,Dutch,Red Bull
+2024,2,374.0,4,norris,Lando Norris,British,McLaren
+2024,3,356.0,3,leclerc,Charles Leclerc,Monegasque,Ferrari
+2024,4,292.0,2,piastri,Oscar Piastri,Australian,McLaren
+2024,5,290.0,2,sainz,Carlos Sainz,Spanish,Ferrari
+2024,6,245.0,2,russell,George Russell,British,Mercedes
+2024,7,223.0,2,hamilton,Lewis Hamilton,British,Mercedes
+2024,8,152.0,0,perez,Sergio Pérez,Mexican,Red Bull
+2024,9,70.0,0,alonso,Fernando Alonso,Spanish,Aston Martin
+2024,10,42.0,0,gasly,Pierre Gasly,French,Alpine F1 Team
+2024,11,41.0,0,hulkenberg,Nico Hülkenberg,German,Haas F1 Team
+2024,12,30.0,0,tsunoda,Yuki Tsunoda,Japanese,RB F1 Team
+2024,13,24.0,0,stroll,Lance Stroll,Canadian,Aston Martin
+2024,14,23.0,0,ocon,Esteban Ocon,French,Alpine F1 Team
+2024,15,16.0,0,kevin_magnussen,Kevin Magnussen,Danish,Haas F1 Team
+2024,16,12.0,0,albon,Alexander Albon,Thai,Williams
+2024,17,12.0,0,ricciardo,Daniel Ricciardo,Australian,RB F1 Team
+2024,18,7.0,0,bearman,Oliver Bearman,British,Ferrari
+2024,19,5.0,0,colapinto,Franco Colapinto,Argentine,Williams
+2024,20,4.0,0,zhou,Guanyu Zhou,Chinese,Sauber
+2024,21,4.0,0,lawson,Liam Lawson,New Zealander,RB F1 Team
+2024,22,0.0,0,bottas,Valtteri Bottas,Finnish,Sauber
+2024,23,0.0,0,sargeant,Logan Sargeant,American,Williams
+2024,24,0.0,0,doohan,Jack Doohan,Australian,Alpine F1 Team
+2025,1,423.0,7,norris,Lando Norris,British,McLaren
+2025,2,421.0,8,max_verstappen,Max Verstappen,Dutch,Red Bull
+2025,3,410.0,7,piastri,Oscar Piastri,Australian,McLaren
+2025,4,319.0,2,russell,George Russell,British,Mercedes
+2025,5,242.0,0,leclerc,Charles Leclerc,Monegasque,Ferrari
+2025,6,156.0,0,hamilton,Lewis Hamilton,British,Ferrari
+2025,7,150.0,0,antonelli,Andrea Kimi Antonelli,Italian,Mercedes
+2025,8,73.0,0,albon,Alexander Albon,Thai,Williams
+2025,9,64.0,0,sainz,Carlos Sainz,Spanish,Williams
+2025,10,56.0,0,alonso,Fernando Alonso,Spanish,Aston Martin
+2025,11,51.0,0,hulkenberg,Nico Hülkenberg,German,Sauber
+2025,12,51.0,0,hadjar,Isack Hadjar,French,RB F1 Team
+2025,13,41.0,0,bearman,Oliver Bearman,British,Haas F1 Team
+2025,14,38.0,0,lawson,Liam Lawson,New Zealander,Red Bull
+2025,15,38.0,0,ocon,Esteban Ocon,French,Haas F1 Team
+2025,16,33.0,0,stroll,Lance Stroll,Canadian,Aston Martin
+2025,17,33.0,0,tsunoda,Yuki Tsunoda,Japanese,RB F1 Team
+2025,18,22.0,0,gasly,Pierre Gasly,French,Alpine F1 Team
+2025,19,19.0,0,bortoleto,Gabriel Bortoleto,Brazilian,Sauber
+2025,20,0.0,0,colapinto,Franco Colapinto,Argentine,Alpine F1 Team
+2025,21,0.0,0,doohan,Jack Doohan,Australian,Alpine F1 Team
