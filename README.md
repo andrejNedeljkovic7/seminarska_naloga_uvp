@@ -1,46 +1,8 @@
 # Analiza podatkov Formule 1 (2018 – 2025)
 
-Avtomatizirano orodje za zajem, predpomnjenje, obdelavo in vizualno analizo podatkov dirk Formule 1 za sezone od 2018 do vključno 2025.
+Orodje za prenos, predpomnjenje, obdelavo in analizo podatkov dirk Formule 1 za sezone 2018–2025.
 
-Projekt pridobiva dirkaške podatke prek odprtokodnega vmesnika Jolpica Ergast API, shranjuje surove odgovore v lokalni predpomnilnik (za hitro izvajanje brez ponovnega obremenjevanja omrežja), pretvarja gnezdeno strukturo JSON v urejene tabele CSV ter ponuja poglobljeno analizo v interaktivnem Jupyter zvezku.
-
----
-
-## Kazalo vsebine
-- [Arhitektura programa](#arhitektura-programa)
-- [Struktura repozitorija](#struktura-repozitorija)
-- [Zahteve in namestitev](#zahteve-in-namestitev)
-- [Zagon programa](#zagon-programa)
-- [Ogled rezultatov analize](#ogled-rezultatov-analize)
-- [Opis podatkovnih zbirk](#opis-podatkovnih-zbirk)
-- [Ključna raziskovalna vprašanja](#ključna-raziskovalna-vprašanja)
-
----
-
-## Arhitektura programa
-
-Projekt je zasnovan modularno z jasno ločenimi nalogami:
-
-```
-[Jolpica Ergast API]
-         │
-         ▼
-     zajem.py           ───> Lokalni predpomnilnik (podatki/predpomnilnik/*.json)
-         │
-         ▼
-    obdelava.py         ───> Pretvorba v pandas DataFrame
-         │
-         ▼
- glavna_datoteka.py     ───> Izvoz v tabele CSV (podatki/obdelani/*.csv)
-         │
-         ▼
-    analiza.ipynb       ───> Grafični prikazi in ugotovitve analize
-```
-
-1. **`zajem.py`**: Skrbi za poizvedbe na API z uporabo varne seje, ponovnih poskusov ob izpadih ter shranjevanja surovih odgovorov v mapo `podatki/predpomnilnik/`.
-2. **`obdelava.py`**: Vsebuje namenske funkcije za pretvorbo surovih podatkov v urejene tabele (rezultati dirk, točke, kvalifikacije, sprint dirke, postanki v boksih in hitrosti krogov).
-3. **`glavna_datoteka.py`**: Edina glavna zagonska datoteka, ki poveže zajem, obdelavo in izvoz podatkov v CSV.
-4. **`analiza.ipynb`**: Interaktivni Jupyter zvezek z grafičnimi prikazi, tabelami in vsebinskimi razlagami.
+Podatke prenesem prek odprtega API-ja Jolpica (Ergast), surove odgovore shranim v lokalni predpomnilnik, jih pretvorim v tabele CSV in analiziram v Jupyter zvezku.
 
 ---
 
@@ -48,89 +10,76 @@ Projekt je zasnovan modularno z jasno ločenimi nalogami:
 
 ```
 seminarska_naloga_uvp/
-├── .gitignore                    # Prezrte začasne datoteke
-├── README.md                     # Dokumentacija in navodila za uporabo
-├── zahteve.txt                   # Seznam potrebnih knjižnic
-├── requirements.txt              # Standardni indeks knjižnic
-├── glavna_datoteka.py            # Edina glavna zagonska datoteka
-├── zajem.py                      # Modul za zajem podatkov
-├── obdelava.py                   # Modul za obdelavo podatkov
-├── analiza.ipynb                 # Jupyter zvezek z vizualizacijami
+├── .gitignore                  # prezrte začasne datoteke
+├── README.md                   # navodila za uporabo
+├── requirements.txt            # seznam potrebnih knjižnic
+├── glavna_datoteka.py          # edina vstopna točka programa
+├── zajem.py                    # prenos podatkov in predpomnjenje
+├── obdelava.py                 # pretvorba JSON v tabele pandas
+├── analiza.ipynb               # zvezek z izračuni in grafi
 └── podatki/
-    ├── predpomnilnik/            # Shranjeni surovi JSON odgovori
-    └── obdelani/                 # Končne tabele CSV za analizo
-        ├── lestvica_konstruktorji.csv
+    ├── predpomnilnik/          # shranjeni surovi JSON odgovori
+    └── obdelani/               # končne tabele CSV
         ├── lestvica_dirkaci.csv
-        ├── postanki_v_boksih.csv
-        ├── kvalifikacije.csv
+        ├── lestvica_konstruktorji.csv
         ├── rezultati_dirk.csv
-        └── sprint_dirke.csv
+        ├── kvalifikacije.csv
+        ├── sprint_dirke.csv
+        └── postanki_v_boksih.csv
 ```
 
 ---
 
-## Zahteve in namestitev
+## Kaj dela koda
 
-### Predpogoji
-- Nameščen Python (različica 3.10 ali novejša)
-- Nameščen Git
+- **`zajem.py`** – prenaša podatke s končnih točk API-ja. API vrača največ 100 zapisov na zahtevek, zato funkcija `prenesi_vse_strani()` prebere vse strani (rezultati, kvalifikacije in sprint dirke). Vsak odgovor se shrani v `podatki/predpomnilnik/`, tako da naslednji zagon ne potrebuje omrežja. Če prenos po treh poskusih ne uspe, program javi napako in se ustavi, namesto da bi shranil nepopolne podatke.
+- **`obdelava.py`** – pretvori gnezdene odgovore JSON v tabele pandas (lestvici, rezultati dirk, kvalifikacije, sprint dirke, postanki).
+- **`glavna_datoteka.py`** – poveže obe zgornji datoteki in shrani šest tabel CSV v `podatki/obdelani/`.
+- **`analiza.ipynb`** – izračuni, grafi in razlage.
 
-### Namestitev knjižnic
-Klonirajte repozitorij in namestite potrebne pakete:
+---
+
+## Namestitev in zagon
 
 ```bash
-git clone <povezava-do-repozitorija>
+git clone https://github.com/andrejNedeljkovic7/seminarska_naloga_uvp.git
 cd seminarska_naloga_uvp
-pip install -r zahteve.txt
-```
-
----
-
-## Zagon programa
-
-Celoten postopek zajema in osvežitve podatkov zaženete z zagonom edine glavne datoteke:
-
-```bash
+pip install -r requirements.txt
 python glavna_datoteka.py
 ```
 
-Program bo:
-1. Preveril lokalni predpomnilnik oziroma prenesel manjkajoče podatke za sezone 2018–2025.
-2. Pretvoril podatke v urejene tabele.
-3. Shranil šest CSV tabel v mapo `podatki/obdelani/`.
-4. V terminalu izpisal število obdelanih vrstic in povzetek izvajanja.
+Zagon traja nekaj minut, ker program ob prvem zagonu prenese podatke za osem sezon. Ob ponovnem zagonu se uporabi predpomnilnik.
 
----
-
-## Ogled rezultatov analize
-
-Za interaktivni ogled grafov in statističnih ugotovitev zaženite Jupyter:
+Za ogled analize odprite zvezek:
 
 ```bash
 jupyter notebook analiza.ipynb
 ```
 
-Zvezek lahko odprete tudi neposredno v Visual Studio Code, PyCharmu ali prek spletnega vmesnika na GitHubu, saj so vsi grafi in tabele vnaprej izrisani in shranjeni.
-
 ---
 
-## Opis podatkovnih zbirk
+## Opis tabel
 
-| Ime datoteke | Vsebina | Ključni stolpci |
+| Datoteka | Vsebina | Ključni stolpci |
 |---|---|---|
-| `lestvica_dirkaci.csv` | Končne uvrstitve dirkačev po sezonah (2018–2025) | `sezona`, `uvrstitev`, `tocke`, `zmage`, `ime_dirkaca`, `ekipa` |
-| `lestvica_konstruktorji.csv` | Uvrstitve ekip v konstruktorskem prvenstvu | `sezona`, `uvrstitev`, `tocke`, `zmage`, `ime_konstruktorja` |
-| `rezultati_dirk.csv` | Podrobni rezultati posameznih dirk in najhitrejši krogi | `sezona`, `stevilka_dirke`, `ime_dirke`, `ime_dirkaca`, `startno_mesto`, `koncno_mesto`, `tocke`, `hitrost_najhitrejsega_kroga_kmh` |
-| `kvalifikacije.csv` | Doseženi časi in uvrstitve na kvalifikacijah | `sezona`, `stevilka_dirke`, `ime_dirke`, `ime_dirkaca`, `uvrstitev_kvalifikacij`, `q1`, `q2`, `q3`, `najboljsi_cas_sekunde` |
-| `postanki_v_boksih.csv` | Podatki o postankih in času menjave pnevmatik | `sezona`, `stevilka_dirke`, `ime_dirke`, `id_dirkaca`, `stevilka_postanka`, `trajanje_sekunde` |
-| `sprint_dirke.csv` | Uvrstitve na sobotnih sprint dirkah (2021–2025) | `sezona`, `stevilka_dirke`, `ime_dirke`, `ime_dirkaca`, `startno_mesto`, `koncno_mesto`, `tocke` |
+| `lestvica_dirkaci.csv` | končne uvrstitve dirkačev po sezonah | `sezona`, `uvrstitev`, `tocke`, `zmage`, `ime_dirkaca`, `ekipa` |
+| `lestvica_konstruktorji.csv` | uvrstitve ekip v konstruktorskem prvenstvu | `sezona`, `uvrstitev`, `tocke`, `zmage`, `ime_konstruktorja` |
+| `rezultati_dirk.csv` | rezultati dirk z najhitrejšimi krogi in hitrostmi | `sezona`, `stevilka_dirke`, `ime_dirke`, `ime_dirkaca`, `startno_mesto`, `koncno_mesto`, `hitrost_najhitrejsega_kroga_kmh` |
+| `kvalifikacije.csv` | uvrstitve in časi iz kvalifikacij | `sezona`, `stevilka_dirke`, `ime_dirkaca`, `uvrstitev_kvalifikacij`, `q1`, `q2`, `q3` |
+| `sprint_dirke.csv` | uvrstitve in točke s sprint dirk (2021–2025) | `sezona`, `stevilka_dirke`, `ime_dirkaca`, `startno_mesto`, `koncno_mesto`, `tocke` |
+| `postanki_v_boksih.csv` | trajanje postankov v boksih | `sezona`, `stevilka_dirke`, `id_dirkaca`, `stevilka_postanka`, `krog_postanka`, `trajanje_sekunde` |
 
 ---
 
-## Ključna raziskovalna vprašanja
+## Omejitve podatkov
 
-1. **Obdobja prevlade**: Kako se je premoč gibala med Mercedesom (2018–2020), Red Bullom (2022–2023) in vzponom McLarna ter Ferrarija (2024–2025)?
-2. **Učinek najboljšega štartnega položaja**: Kolikšen je delež zmag iz prvega štartnega mesta (Pole position) ter kakšna je korelacija med štartnim mestom in ciljem?
-3. **Učinkovitost postankov v boksih**: Kakšna je mediana trajanja postanka v boksih in katera strategija menjave pnevmatik (1 ali 2 postanka) prevladuje?
-4. **Hitrost na stezah**: Kako so pravila talnega učinka leta 2022 vplivala na povprečne hitrosti na dirkališčih Monza, Silverstone, Spa in Monako?
-5. **Doprinos sprint dirk**: Kolikšen točkovni doprinos prinašajo sobotne sprint dirke in kdo so njihovi največji dobitniki?
+- **Postanki v boksih**: API ponuja postanke le po posamezni dirki, zato jih prenašam za pet vzorčnih dirk v sezoni (1., 5., 10., 15. in 20. krog koledarja). Tabela `postanki_v_boksih.csv` je zato vzorec in ne zajema vseh dirk. Za sezono 2020 20. dirka ne obstaja (sezona je imela 17 dirk), zato je pri tej sezoni petih dirk manj; to je pri zagonu izpisano kot opozorilo.
+- **Hitrosti najhitrejših krogov**: v viru za leto 2025 ni podatka o hitrosti najhitrejšega kroga, zato se grafi hitrosti končajo z letom 2024. Manjkajo tudi posamezne dirke (Monako 2020 je bil odpovedan, za Monako 2024 in Spa 2021 pa v viru ni podatka).
+- **Sprint točke**: leta 2021 so točke dobili trije najboljši (3-2-1), od leta 2022 naprej prvih osem (8-7-…-1). Skupne vsote po dirkačih zato mešajo dva različna sistema.
+- **Najboljši štartni položaj**: za "pole" v analizi vzamem prvo mesto v kvalifikacijah (`kvalifikacije.csv`), ne prvega štartnega mesta iz rezultatov, ker se zaradi kazni lahko razlikujeta.
+
+---
+
+## Uporabljena orodja
+
+Kodo in besedilo sem napisal sam, pri pisanju pa sem si pomagal z orodji umetne inteligence (predvsem za razlago napak in urejanje besedila). Vse izračune in številke v zvezku sem preveril tako, da sem zvezek zagnal od začetka do konca in vrednosti prepisal iz izpisov.
