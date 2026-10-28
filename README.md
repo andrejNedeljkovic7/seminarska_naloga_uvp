@@ -77,9 +77,3 @@ jupyter notebook analiza.ipynb
 - **Hitrosti najhitrejših krogov**: v viru za leto 2025 ni podatka o hitrosti najhitrejšega kroga, zato se grafi hitrosti končajo z letom 2024. Manjkajo tudi posamezne dirke (Monako 2020 je bil odpovedan, za Monako 2024 in Spa 2021 pa v viru ni podatka).
 - **Sprint točke**: leta 2021 so točke dobili trije najboljši (3-2-1), od leta 2022 naprej prvih osem (8-7-…-1). Skupne vsote po dirkačih zato mešajo dva različna sistema.
 - **Najboljši štartni položaj**: za "pole" v analizi vzamem prvo mesto v kvalifikacijah (`kvalifikacije.csv`), ne prvega štartnega mesta iz rezultatov, ker se zaradi kazni lahko razlikujeta.
-
----
-
-## Uporabljena orodja
-
-Kodo in besedilo sem napisal sam, pri pisanju pa sem si pomagal z orodji umetne inteligence (predvsem za razlago napak in urejanje besedila). Vse izračune in številke v zvezku sem preveril tako, da sem zvezek zagnal od začetka do konca in vrednosti prepisal iz izpisov.
